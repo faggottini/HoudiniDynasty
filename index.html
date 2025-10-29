@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курсы иностранных языков</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* --- Баннер --- */
+      .banner {
+        width: 100%;
+        height: 250px;
+        background: url("kartinki/skidkabanner.jpg") center center/cover
+          no-repeat;
+        margin-bottom: 20px;
+        border-radius: 0px;
+      }
+
+      /* --- Популярные языки горизонтально с картинками --- */
+      .languages-list {
+        display: flex;
+        justify-content: center;
+        gap: 300px;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 40px;
+      }
+
+      .languages-list li {
+        text-align: center;
+        width: 300px; /* под размер картинки */
+        flex-shrink: 0;
+        font-weight: 600;
+        font-size: 22px;
+        color: #004080;
+        margin-top: 10px; /* чтобы немного отделить текст от картинки */
+      }
+
+      .languages-list img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #004080;
+      }
+
+      /* --- Карусель --- */
+      .carousel-container {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 50px auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .carousel-slide {
+        min-width: 220px;
+        height: 220px;
+        margin: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 2px solid #004080;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      main > h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #500229;
+        margin-bottom: 15px;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(0, 64, 128, 0.3);
+      }
+
+      /* --- Стиль для параграфа под баннером --- */
+      main > p {
+        font-size: 20px;
+        font-weight: 500;
+        color: #49042c;
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .teachers-list {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* расстояние между карточками */
+        padding: 0;
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .teachers-list li {
+        width: 300px; /* ширина под картинку и текст */
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #004080;
+        flex-shrink: 0;
+      }
+
+      .teachers-list img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 2px solid #004080;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .teacher-info p {
+        margin: 4px 0;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .stroka {
+        color: #d90d0d;
+        font-size: 10px;
+        font-weight: bolder;
+        text-shadow: #000000 1px 1px 1px;
+        line-height: 80%;
+      }
+      .signup-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #4c5baf;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .signup-button:hover {
+        background-color: #f37e10;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Курсы иностранных языков Династии Гудини</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="courses.html">О курсах</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </header>
+
+    <div class="stroka">
+      <marquee
+        >ВНИМАНИЕ! ВАШИ ДЕНЬГИ ПОТРАЧЕННЫЕ НА КУРСЫ НЕ БУДУТ ВОЗВРАЩЕНЫ! МЫ НЕ
+        НЕСЕМ ОТВЕТСВЕННОСТЬ ЗА ВАШИ РЕШЕНИЯ. не СОХРАНЯЙТЕ ЧЕКИ ДЛЯ ДАЛЬНЕЙШЕГО
+        СУДЕБНОГО РАЗБИРАТЕЛЬСТВА! МЫ НЕ ВОЗВРАЩАЕМ ОРИГИНАЛЫ ДОКУМЕНТОВ
+        ПРЕДОСТАВЛЕННЫЕ НАМ В НАШЕМ ОФИСЕ!!! ЗАПИСЫВАЯСЬ НА НАШИ КУРСЫ ВЫ
+        СОГЛАШАЕТЕСЬ НА ВСЕ ПЕРЕЧИСЛЕННЫЕ УСЛОВИЯ В ДОКУМЕНТЕ
+        http:/docs.com/document/hgsdiwueytduedhcyxujgshcxgajygtdcxyhagxhcgvahsgdygwaehgdxhajsgxygtyugxhagbsdy7w7gdjhgjabxgays7dqydgqgdia79ahxcajbjat7w
+        всех благ(* ^ ω ^)
+      </marquee>
+    </div>
+
+    <!-- Баннер с картинкой -->
+    <div class="banner"></div>
+    <main>
+      <h2>Добро пожаловать!</h2>
+      <p>
+        Изучайте иностранные языки легко и с удовольствием. Онлайн и
+        офлайн-курсы с опытными преподавателями.
+      </p>
+
+      <h3>Популярные языки:</h3>
+      <ul class="languages-list">
+        <li>
+          <img src="kartinki/bigbob.png" alt="Английский" />
+          Английский
+        </li>
+        <li>
+          <img src="kartinki/nemcat.png" alt="Немецкий" />
+          Немецкий
+        </li>
+        <li>
+          <img src="kartinki/monstroindaparishe.jpg" alt="Французский" />
+          Французский
+        </li>
+      </ul>
+
+      <a href="courses.html" class="button">Подробнее о курсах</a>
+
+      <div
+        style="
+          max-width: 700px;
+          margin: 0 auto 15px auto;
+          border: 2px solid #004080;
+          border-radius: 8px;
+          padding: 10px;
+          text-align: center;
+          font-weight: 700;
+          font-size: 24px;
+          color: #004080;
+          max-width: 700px;
+        "
+      >
+        Наши учини-гудини
+      </div>
+
+      <ul class="teachers-list">
+        <li>
+          <img src="kartinki/teacher1.png" alt="Учитель 1" />
+          <div class="teacher-info">
+            <p>Имя: Анна</p>
+            <p>Возраст: 29</p>
+            <p>Стаж: 10 лет</p>
+            <p>Языки: Английский, 🦲 🇪🇸, Японский</p>
+          </div>
+          <a href="teacher1.html" class="signup-button">Записаться на курс</a>
+        </li>
+
+        <li>
+          <img src="kartinki/teacher2.jpg" alt="Учитель 2" />
+          <div class="teacher-info">
+            <p>Имя: Иван</p>
+            <p>Возраст: 35</p>
+            <p>Стаж: 35 лет</p>
+            <p>Языки: Французский, Испанский, Итальянский</p>
+          </div>
+          <a href="teacher2.html" class="signup-button">Записаться на курс</a>
+        </li>
+
+        <li>
+          <img src="kartinki/teacher3.jpg" alt="Учитель 3" />
+          <div class="teacher-info">
+            <p>Имя: Мария</p>
+            <p>Возраст: 31</p>
+            <p>Стаж: 7 лет</p>
+            <p>Языки: Португальский, Английский, Немецкий</p>
+          </div>
+          <a href="teacher3.html" class="signup-button">Записаться на курс</a>
+        </li>
+
+        <li>
+          <img src="kartinki/teacher4.jpg" alt="Учитель 4" />
+          <div class="teacher-info">
+            <p>Имя: Сергей</p>
+            <p>Возраст: 40</p>
+            <p>Стаж: 3 месяца 2 дня</p>
+            <p>Языки: HTML, CSS, JAVA, C++</p>
+          </div>
+          <a href="teacher4.html" class="signup-button">Записаться на курс</a>
+        </li>
+      </ul>
+      <div
+        style="
+          max-width: 700px;
+          margin: 0 auto 15px auto;
+          border: 2px solid #004080;
+          border-radius: 8px;
+          padding: 10px;
+          text-align: center;
+          font-weight: 700;
+          font-size: 24px;
+          color: #004080;
+          max-width: 700px;
+        "
+      >
+        Наши учебники
+      </div>
+
+      <!-- Карусель -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="kartinki/happy1.png" alt="Фото 1" />
+          </div>
+          <div class="carousel-slide">
+            <img src="kartinki/happy2.png" alt="Фото 2" />
+          </div>
+          <div class="carousel-slide">
+            <img src="kartinki/happy3.png" alt="Фото 3" />
+          </div>
+          <div class="carousel-slide">
+            <img src="kartinki/happy4.jpg" alt="Фото 4" />
+          </div>
+          <div class="carousel-slide">
+            <img src="kartinki/happy5.jpg" alt="Фото 5" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2005–2025 Курсы иностранных языков</p>
+    </footer>
+
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(track.children);
+      const slideWidth = slides[0].getBoundingClientRect().width + 20; // margin по 10 с каждой стороны
+
+      // Для бесконечной прокрутки клонируем слайды в конец
+      slides.forEach((slide) => {
+        const clone = slide.cloneNode(true);
+        track.appendChild(clone);
+      });
+
+      let currentIndex = 0;
+
+      function moveCarousel() {
+        currentIndex++;
+        if (currentIndex > slides.length) {
+          // Когда дошли до клонированных слайдов, мгновенно перемещаемся назад
+          track.style.transition = "none";
+          currentIndex = 0;
+          track.style.transform = `translateX(0px)`;
+          // Позже включим плавность снова и сдвинем на 1 слайд
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              track.style.transition = "transform 0.4s ease-in-out";
+              currentIndex++;
+              track.style.transform = `translateX(${
+                -slideWidth * currentIndex
+              }px)`;
+            });
+          });
+        } else {
+          track.style.transition = "transform 0.4s ease-in-out";
+          track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+        }
+      }
+
+      // Запускаем автоматическую прокрутку каждые 0.5 секунды
+      let interval = setInterval(moveCarousel, 800);
+    </script>
+  </body>
+</html>
